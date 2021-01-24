@@ -1,0 +1,19 @@
+@import 'host-variable';
+$host: host('app');
+
+:host {
+  @include hvar(--width, 100vw);
+  @include hvar(--height, 100vh);
+}
+
+:host {
+  display: block;
+  width: hvar(--width);
+  outline: skyblue solid 1px;
+  
+  app-parent {
+    --width: hvar(--width);
+    --height: calc(hvar(--height) - 32px);
+    --side-padding: 32px;
+  }
+}

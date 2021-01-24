@@ -1,0 +1,31 @@
+<h2>App Child Component hvar(--side-padding): {{ sidePadding }}px</h2>
+<div>
+  <h2>Child Contents</h2>
+  <table>
+  　<tr>
+  　　<th>Components / Custom Properties</th>
+  　　<th>--side-padding(default)</th>
+  　　<th>--side-padding(overrided)</th>
+  　</tr>
+  　<tr>
+  　　<td>app-parent</td>
+  　　<td>16px</td>
+  　　<td>{{parentSidePadding}}px</td>
+  　</tr>
+  　<tr>
+  　　<td>app-child</td>
+  　　<td>8px</td>
+  　　<td>{{sidePadding}}px</td>
+  　</tr>
+  </table>
+
+  <button (click)="changeSidePadding('app-child', 64)">Change `--side-padding` property of `app-child` to 64px</button>
+  <button (click)="changeSidePadding('app-child', 16)">Change `--side-padding` property of `app-child` to 16px</button>
+
+  <button (click)="changeSidePadding('app-parent', 64)">Change `--side-padding` property of `app-parent` to 64px</button>
+  <button (click)="changeSidePadding('app-parent', 16)">Change `--side-padding` property of `app-parent` to 16px</button>
+
+  <p style="font-weight: bold;">
+    Please open your inspector and check the `--side-padding` properties of `app-child` and `app-parent`.
+  </p>
+</div>

@@ -1,0 +1,22 @@
+@import 'host-variable';
+$host: host('parent');
+
+:host {
+  @include hvar(--width, 100%);
+  @include hvar(--height, 100vh);
+  @include hvar(--side-padding, 16px);
+}
+
+:host {
+  display: block;
+  width: calc(hvar(--width) - hvar(--side-padding) * 2);
+  height: hvar(--height);
+  padding: 0 hvar(--side-padding);
+  outline: skyblue solid 1px;
+
+  app-child {
+    --width: calc(hvar(--width) - hvar(--side-padding) * 2);
+    --height: calc(hvar(--height) - 32px);
+    --side-padding: 16px;
+  }
+}

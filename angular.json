@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -34,7 +34,7 @@
             },
             "customWebpackConfig": {
               "chain": [
-                "angular-host-css-variable"
+                "node_modules/angular-host-css-variable"
               ]
             }
           },
@@ -64,7 +64,7 @@
             "browserTarget": "demo:build",
             "customWebpackConfig": {
               "chain": [
-                "angular-host-css-variable"
+                "node_modules/angular-host-css-variable"
               ]
             }
           },
@@ -97,7 +97,7 @@
             ],
             "customWebpackConfig": {
               "chain": [
-                "angular-host-css-variable"
+                "node_modules/angular-host-css-variable"
               ]
             }
           }
@@ -117,5 +117,8 @@
       }
     }
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "cli": {
+    "defaultCollection": "angular-host-css-variable"
+  }
 }
