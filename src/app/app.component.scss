@@ -14,6 +14,6 @@ $host: host("app");
   app-parent {
     --width: hvar(--width);
     --height: calc(hvar(--height) - 32px);
-    --side-padding: 16px;
+    --side-padding: 1px;
   }
 }
