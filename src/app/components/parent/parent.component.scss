@@ -1,5 +1,5 @@
-@import 'host-variable';
-$host: host('parent');
+@import "~host-css-variable/host-variable";
+$host: host("parent");
 
 :host {
   @include hvar(--width, 100%);
