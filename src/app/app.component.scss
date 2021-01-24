@@ -1,5 +1,5 @@
-@import 'host-variable';
-$host: host('app');
+@import "~host-css-variable/host-variable";
+$host: host("app");
 
 :host {
   @include hvar(--width, 100vw);
@@ -10,10 +10,10 @@ $host: host('app');
   display: block;
   width: hvar(--width);
   outline: skyblue solid 1px;
-  
+
   app-parent {
     --width: hvar(--width);
     --height: calc(hvar(--height) - 32px);
-    --side-padding: 32px;
+    --side-padding: 16px;
   }
 }
